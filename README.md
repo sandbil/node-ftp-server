@@ -2,38 +2,23 @@
 
 # FTP Server -- Simple featureless FTP server
 
-This is a very simple FTP server. At first it's aimed to simply provide a full-Node implementation of FTP server to be embedded for Unit Testing purpose.
+This is a very simple FTP server. At first it's aimed to simply provide a full-Node implementation of FTP server.
 
-It's currently highly experimental and could crash anytime. It could become a real FTP server if you want to contribute a bit ;) Don't be afraid: FTP protocol is quite simple.
+## News
+
+ * Add support windows ftp client: Total Commander, FileZilla FTP Client
+ * Add support for rename commands
+ * Better implementation of `LIST` and `NLST` to be cross-platform
+
 
 ## Install
 
-```bash
-# Using NPM
-npm install ftp-server
-```
-
-Or from source:
+from source:
 
 ```bash
 # Install from sources...
-git clone git://github.com/naholyr/node-ftp-server.git ftp-server
+git clone git://github.com/sandbil/node-ftp-server.git ftp-server
 cd ftp-server
-npm link
-
-# ...Then in your project
-npm link ftp-server
-```
-
-You can run unit tests:
-
-```bash
-# From your project where ftp-server has been installed as a module
-npm test ftp-server
-
-# Or directly from ftp-server
-npm test
-```
 
 ## Usage
 
@@ -56,9 +41,6 @@ Just look at the code. I'll fully document the ways to extend the server with ad
 Note that the original implementation I based my work on was [@billywhizz 's from GitHub](https://github.com/billywhizz/nodeftpd).
 
 ## Roadmap
-
- * Add support for rename commands
- * Better implementation of `LIST` and `NLST` to be cross-platform
  * Add support for `REST` command (restart an interrupted download)
  * Maybe wrap all this stuff in a class or at least a function with options (like what FS we'll use)
  * Add better documentation on how to extend server (add "features") or new FS wrappers
